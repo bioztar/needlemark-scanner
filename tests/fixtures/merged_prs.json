@@ -1,0 +1,75 @@
+[
+  {
+    "number": 101, "additions": 100, "deletions": 20,
+    "createdAt": "2026-09-01T00:00:00Z", "mergedAt": "2026-09-01T10:00:00Z",
+    "author": {"login": "fake-human-dev", "is_bot": false},
+    "reviewDecision": "APPROVED",
+    "reviews": [{"author": {"login": "fake-reviewer-two"}, "state": "APPROVED", "body": "lgtm fake-review-text"}],
+    "comments": [
+      {"author": {"login": "fake-reviewer-two"}, "body": "fake-comment-text-one"},
+      {"author": {"login": "fake-human-dev"}, "body": "fake-comment-text-two"}
+    ]
+  },
+  {
+    "number": 102, "additions": 250, "deletions": 50,
+    "createdAt": "2026-09-02T00:00:00Z", "mergedAt": "2026-09-02T02:00:00Z",
+    "author": {"login": "app/devin-ai-integration", "is_bot": true},
+    "reviewDecision": "",
+    "reviews": [{"author": {"login": "devin-ai-integration[bot]"}, "state": "COMMENTED", "body": "self"}],
+    "comments": [
+      {"author": {"login": "devin-ai-integration"}, "body": "self note"},
+      {"author": {"login": "fake-deploy-preview[bot]"}, "body": "preview ready"}
+    ]
+  },
+  {
+    "number": 103, "additions": 40, "deletions": 10,
+    "createdAt": "2026-09-03T00:00:00Z", "mergedAt": "2026-09-04T06:00:00Z",
+    "author": {"login": "app/claude", "is_bot": true},
+    "reviewDecision": "REVIEW_REQUIRED",
+    "reviews": [],
+    "comments": []
+  },
+  {
+    "number": 104, "additions": 8, "deletions": 2,
+    "createdAt": "2026-09-05T00:00:00Z", "mergedAt": "2026-09-05T05:00:00Z",
+    "author": {"login": "Copilot", "is_bot": true},
+    "reviewDecision": "",
+    "reviews": [{"author": {"login": "fake-human-dev"}, "state": "CHANGES_REQUESTED", "body": "fix this"}],
+    "comments": []
+  },
+  {
+    "number": 105, "deletions": 7,
+    "createdAt": "not-a-date", "mergedAt": "2026-09-06T00:00:00Z",
+    "author": null,
+    "reviewDecision": "APPROVED",
+    "reviews": null,
+    "comments": null
+  },
+  {
+    "number": 106, "additions": 3, "deletions": 1,
+    "createdAt": "2026-09-07T00:00:00Z", "mergedAt": "2026-09-07T01:00:00Z",
+    "author": {"login": "app/fake-renovate", "is_bot": true},
+    "reviewDecision": "",
+    "reviews": [
+      {"author": {"login": "fake-human-dev"}, "state": "DISMISSED", "body": ""},
+      {"author": {"login": "fake-reviewer-two"}, "state": "PENDING", "body": ""}
+    ],
+    "comments": []
+  },
+  {
+    "number": 107, "additions": 999, "deletions": 999,
+    "createdAt": "2024-12-31T00:00:00Z", "mergedAt": "2025-01-01T00:00:00Z",
+    "author": {"login": "fake-human-dev", "is_bot": false},
+    "reviewDecision": "",
+    "reviews": [],
+    "comments": []
+  },
+  {
+    "number": 108, "additions": 60, "deletions": 0,
+    "createdAt": "2026-09-08T00:00:00Z", "mergedAt": "2026-09-08T20:00:00Z",
+    "author": {"login": "app/cursor", "is_bot": true},
+    "reviewDecision": "",
+    "reviews": [{"author": {"login": "devin-ai-integration"}, "state": "COMMENTED", "body": "agent review"}],
+    "comments": []
+  }
+]

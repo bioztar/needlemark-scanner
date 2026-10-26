@@ -1,0 +1,6 @@
+{
+  "vendors": [
+    {"label": "Acme Dev", "email_domains": ["acme.example"], "logins": ["^acme-"]},
+    {"label": "Tiny Co", "email_domains": ["tiny.example"], "logins": ["^tiny-"]}
+  ]
+}

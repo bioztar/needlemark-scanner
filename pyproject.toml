@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "needlemark-aems"
+version = "0.1.0"
+description = "Agentic Engineering Maturity Score (AEMS) scanner: read-only, stdlib-only, numbers-only export"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = []
+keywords = ["agentic engineering", "coding agents", "maturity model", "code review", "git"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+aems = "aems.__main__:main"
+
+[tool.setuptools]
+packages = ["aems"]
+
+[tool.setuptools.package-data]
+aems = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

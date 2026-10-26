@@ -1,0 +1,19 @@
+{
+  "version": "pack-2026.10.1",
+  "dated": "2026-10-26",
+  "review_cadence": "quarterly",
+  "rubber_stamp": {
+    "max_lines_per_hour": 500,
+    "min_seconds": 60,
+    "rule": "an approval is a rubber stamp when (approval time - PR open time) < max(min_seconds, changed lines / max_lines_per_hour hours)",
+    "rationale": "Open-to-approval time is an upper bound on reading time (it also contains waiting), so an approval faster than the slowest effective reading rate cannot have been an effective review. Defect detection drops sharply above roughly 500 lines of code per hour. The 60-second floor for tiny PRs is a design choice.",
+    "source": "SmartBear / Cisco code review case study, 2,500 reviews, 3.2M LOC (Cohen, Best Kept Secrets of Peer Code Review, 2006): https://static1.smartbear.co/support/media/resources/cc/book/code-review-cisco-case-study.pdf ; SmartBear, Best Practices for Code Review: https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/"
+  },
+  "fix_subject_patterns": [
+    "^(fix|hotfix|bugfix)(\\([^)]*\\))?!?:",
+    "^Revert \""
+  ],
+  "bug_label_pattern": "(^|[^a-z])(bug|defect|regression)([^a-z]|$)",
+  "escape_windows_days": [30, 90],
+  "limits": {"max_fixes": 300, "max_files_per_fix": 40}
+}
